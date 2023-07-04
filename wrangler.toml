@@ -3,7 +3,7 @@ main = "src/index.ts"
 compatibility_date = "2022-05-15"
 # Set this to false if you don't want to use the default *.workers.dev route.
 # Note that *.workers.dev routes don't support native worker-level caching: https://developers.cloudflare.com/workers/runtime-apis/cache/
-workers_dev = true
+workers_dev = false
 
 [vars]
 # The `access-control-allow-origin` header: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin
@@ -32,7 +32,7 @@ NOTFOUND_FILE = ""
 
 # Enable to show a directory listing fallback on paths ending in /
 # If INDEX_FILE is also provided, it will be used instead if the file exists. 
-DIRECTORY_LISTING = false
+DIRECTORY_LISTING = true
 
 # Enable to hide files or directories beginning with . from directory listings.
 HIDE_HIDDEN_FILES = false
@@ -42,5 +42,5 @@ DIRECTORY_CACHE_CONTROL = "no-store"
 
 [[r2_buckets]]
 binding = "R2_BUCKET"
-bucket_name = "kot"         # Set this to your R2 bucket name. Required
-preview_bucket_name = "kot" # Set this to your preview R2 bucket name. Can be equal to bucket_name. Optional
+bucket_name = "cl-bucket-testing"         # Set this to your R2 bucket name. Required
+preview_bucket_name = "cl-bucket-testing" # Set this to your preview R2 bucket name. Can be equal to bucket_name. Optional
