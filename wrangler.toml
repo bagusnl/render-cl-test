@@ -40,6 +40,10 @@ HIDE_HIDDEN_FILES = false
 # Set a cache header here, e.g. "max-age=86400", if you want to cache directory listings.
 DIRECTORY_CACHE_CONTROL = "max-age=86400"
 
+[placement]
+# Use smart placement for lowering access latency to the bucket
+mode = "smart"
+
 [[r2_buckets]]
 binding = "R2_BUCKET"
 bucket_name = "cl-bucket-testing"         # Set this to your R2 bucket name. Required
